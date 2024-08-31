@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/script.js"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/css/register/style.css">
+    <link rel="stylesheet" href="/css/cores.css">
+    <link rel="icon" href="/img/logo.png">
+    <title>Register</title>
+</head>
+<body>
+    <main>
+
+
+        <% if (errorEmail || '')  { %>
+            <script>
+                alert('<%= errorEmail %>');
+            </script>
+        <% } %>
+
+
+        <% if (errorName || '') { %>
+            <script>
+                alert('<%= errorName %>');
+            </script>
+        <% } %>
+
+
+
+        <img src="/img/img_kangoroo/logo.png" alt="Logo" id="logo">
+
+        <section class="rect">
+            <h1 class="title"><b>Kangoroo</b></h1>
+
+            <form action="/registerUser" method="post" enctype="multipart/form-data">
+
+                <h1><b>Kangoroo</b></h1>
+    
+                <div class="centralize">
+                    <label for="imagem">
+                        <img src="img/icons/profile.svg" alt="Insira sua imagem" id="pessoa" class="img">
+                    </label>
+                    <input type="file" id="imagem" name="foto" onchange="Imagem()" accept="image/*">
+                </div>
+
+                <div class="group">
+                    <label for="name">Nome:</label>
+                    <input type="text" class="input" id="name" name="name">
+                </div>
+    
+                <div class="group">
+                    <label for="birth">Nascimento:</label>
+                    <input type="date" class="input" id="birth" name="birth">
+                </div>
+                
+                <div class="group">
+                    <label for="bio">Bio:</label>
+                    <input type="text" class="input" id="bio" name="bio">
+                </div>
+
+                <div class="group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="input" id="email" name="email">
+                </div>
+
+                <div class="group">
+                    <label for="password">Senha:</label>
+                    <input type="password" class="input" id="password" name="password">
+                </div>
+
+
+                <button type="submit" class="btnEnter">Entrar</button>
+
+            </form>
+
+
+        </section>
+    </main>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+    <script src="scripts/script.js"></script>
+</body>
+</html>
